@@ -25,9 +25,6 @@ $fb-border-color-light: #e3e3e3;
   background: gradient(linear, left bottom, left top, color-stop(0, $bottom), color-stop(1, $top));
 }
 
-
-
-
 @mixin fb-link {
   color: $fb-link-color;
   text-decoration: none;
@@ -68,7 +65,11 @@ $fb-border-color-light: #e3e3e3;
   font-weight: bold;
   text-decoration: none;
   padding: 0 14px;
-  line-height: 22px;
+  line-height: 20px;
+
+  &:focus, &:active{
+    outline: none;
+  }
 }
 
 @mixin _fb-button-dark {
@@ -125,4 +126,42 @@ $fb-border-color-light: #e3e3e3;
 
 @mixin fb-button-rounded {
   border-radius: 3px;
+}
+
+/* Forms */
+@mixin fb-input-wrapper {
+  margin-bottom: 5px;
+}
+
+@mixin fb-label {
+  color: $fb-font-color-medium;
+  font-size: $fb-font-size-small;
+  display: block;
+  font-weight: bold;
+}
+
+@mixin fb-label-horizontal {
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+  line-height: 20px;
+  width: 150px;
+}
+
+@mixin fb-input {
+  border: 1px solid #BDC7D8;
+  font-family: $fb-font-family;
+  font-size: $fb-font-size-small;
+  color: $fb-font-color;
+  padding: 3px;
+  display: inline-block;
+
+  &:active, &:focus{
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+@mixin fb-select {
+  @include fb-input;
 }

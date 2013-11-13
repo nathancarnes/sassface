@@ -41,3 +41,20 @@ a{
 .button.large{
   @include fb-button-large;
 }
+
+div.input{
+  @include fb-input-wrapper;
+}
+
+label{
+  @include fb-label;
+  @include fb-label-horizontal;
+}
+
+input{
+  @include fb-input;
+}
+
+select{
+  @include fb-select;
+}
