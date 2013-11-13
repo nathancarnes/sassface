@@ -17,6 +17,16 @@ $fb-background-color-alt: #edeff4;
 
 $fb-border-color-light: #e3e3e3;
 
+/* Utilities */
+@mixin sassface-gradient($top: #eee, $bottom: #aaa){
+  background: mix($top, $bottom, 50);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $bottom), color-stop(1, $top));
+  background: -moz-linear-gradient(center bottom, $bottom 0%, $top 100%);
+  background: gradient(linear, left bottom, left top, color-stop(0, $bottom), color-stop(1, $top));
+}
+
+
+
 
 @mixin fb-link {
   color: $fb-link-color;
@@ -48,4 +58,71 @@ $fb-border-color-light: #e3e3e3;
   padding: 4px;
   font-size: $fb-font-size-small;
   margin-bottom: 10px;
+}
+
+/* Buttons */
+@mixin _fb-button {
+  border: 1px solid;
+  display: inline-block;
+  font-family: $fb-font-family;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 14px;
+  line-height: 22px;
+}
+
+@mixin _fb-button-dark {
+  color: #fff;
+  background: #5B74A8;
+  border-color: #29447E #29447E #1A356E;
+  box-shadow: inset 0 1px 0 #8a9cc2;
+
+  &:active{
+    background: #4F6AA3;
+    border-bottom-color: #29447E;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2) inset;
+  }
+}
+
+@mixin _fb-button-light {
+  @include sassface-gradient(#f5f6f6, #e4e4e3);
+  color: $fb-font-color;
+  border-color: #999 #999 #888;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 #fff;
+
+  &:active{
+    background: #DDD;
+    border-bottom-color: #999;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2) inset;
+  }
+}
+
+@mixin fb-button-dark {
+  @include _fb-button;
+  @include _fb-button-dark;
+
+  font-size: $fb-font-size-small;
+}
+
+@mixin fb-button-light {
+  @include _fb-button;
+  @include _fb-button-light;
+
+  font-size: $fb-font-size-small;
+}
+
+@mixin fb-button-medium {
+  font-size: $fb-font-size;
+  line-height: 26px;
+  padding: 0 18px;
+}
+
+@mixin fb-button-large {
+  font-size: $fb-font-size-large;
+  line-height: 30px;
+  padding: 0 24px
+}
+
+@mixin fb-button-rounded {
+  border-radius: 3px;
 }

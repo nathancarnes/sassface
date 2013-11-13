@@ -44,7 +44,7 @@ a{
 
 ## TODO
 
-1. Button
+1. ~~Buttons~~
 2. Lists
 3. Headers
 4. Forms

@@ -17,3 +17,27 @@ a{
 .alt-panel{
   @include fb-panel-alt;
 }
+
+.buttons .button{
+  margin: 5px;
+}
+
+.button.dark{
+  @include fb-button-dark;
+}
+
+.button.light{
+  @include fb-button-light;
+}
+
+.button.rounded{
+  @include fb-button-rounded;
+}
+
+.button.medium{
+  @include fb-button-medium;
+}
+
+.button.large{
+  @include fb-button-large;
+}
