@@ -1,0 +1,28 @@
+/* Variables */
+body {
+  color: #333333;
+  font-size: 13px;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  line-height: 1.3;
+  margin: 20px auto;
+  width: 500px; }
+
+a {
+  color: #3b5998;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.panel {
+  background: #f7f7f7;
+  border: 1px solid #e3e3e3;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 11px;
+  color: gray; }
+
+.alt-panel {
+  background: #edeff4;
+  padding: 4px;
+  font-size: 11px;
+  margin-bottom: 10px; }

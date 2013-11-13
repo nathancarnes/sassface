@@ -1,0 +1,19 @@
+@import "../sassface";
+
+body{
+  @include fb-text;
+  margin: 20px auto;
+  width: 500px;
+}
+
+a{
+  @include fb-link;
+}
+
+.panel{
+  @include fb-panel;
+}
+
+.alt-panel{
+  @include fb-panel-alt;
+}

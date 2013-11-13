@@ -1,0 +1,51 @@
+/* Variables */
+$fb-font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+$fb-font-family-alt: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
+
+$fb-font-size-small: 11px;
+$fb-font-size: 13px;
+$fb-font-size-large: 16px;
+
+$fb-font-color: #333;
+$fb-font-color-medium: #808080;
+$fb-font-color-light: #999;
+
+$fb-link-color: #3B5998;
+
+$fb-background-color-light: #F7F7F7;
+$fb-background-color-alt: #edeff4;
+
+$fb-border-color-light: #e3e3e3;
+
+
+@mixin fb-link {
+  color: $fb-link-color;
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+@mixin fb-text {
+  color: $fb-font-color;
+  font-size: $fb-font-size;
+  font-family: $fb-font-family;
+  line-height: 1.3;
+}
+
+@mixin fb-panel {
+  background: $fb-background-color-light;
+  border: 1px solid $fb-border-color-light;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: $fb-font-size-small;
+  color: $fb-font-color-medium;
+}
+
+@mixin fb-panel-alt {
+  background: $fb-background-color-alt;
+  padding: 4px;
+  font-size: $fb-font-size-small;
+  margin-bottom: 10px;
+}
